@@ -11,8 +11,9 @@ module.exports = merge(baseWebpackConfig, {
     devServer: {
         contentBase: path.resolve(__dirname, '..', 'static'),//静态文件
         historyApiFallback: true,//spa不跳转,history模式的路由需要true
-        host: 'localhost',
+        // host: '0.0.0.0',
         port: port,
+        disableHostCheck: true,
         // hot:true,
         inline: true,//实时刷新
         compress: true,//Enable gzip compression for everything served
